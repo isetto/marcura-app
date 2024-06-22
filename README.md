@@ -1,27 +1,19 @@
-# MarcuraApp
+## Start application
+npm run start
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+## Run unit test
+npm run test
 
-## Development server
+## Architechtural decisions
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Data Binding Approach
+Instead of using @Input() and @Output(), I chose a reactive approach with BehaviorSubjects. While @Input() and @Output() might suffice for this simple application, a reactive approach ensures easier maintenance and scalability as application features expand.
 
-## Code scaffolding
+### Map Choice
+I considered both Google Maps and Leaflet. I opted for Leaflet due to its free availability and ease of setup. Unlike Google Maps, Leaflet doesn’t require setting up a project in the Google Console or generating an API token.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Chart Choice
+Initially, I used Chart.js but encountered difficulties in setting the dimensions properly. I switched to ECharts, which provided a more straightforward configuration for the chart dimensions.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Unit testing
+For testing purposes, I set all fields and methods with appropriate accessors (public/private) to ensure only public methods are tested. This approach adheres to the principle of testing only the external behavior of components, ensuring that internal implementation details can be changed without affecting the tests. This aligns with the principles of encapsulation and information hiding, promoting more robust and maintainable code.
