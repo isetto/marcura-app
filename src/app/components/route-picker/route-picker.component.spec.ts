@@ -8,8 +8,8 @@ import { LegendComponent } from '../legend/legend.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { By } from '@angular/platform-browser';
 import { of } from 'rxjs';
-import { RouteData } from '../models/route.model';
-import { RouteDataProviderService } from '../services/route-data-provider.service';
+import { RouteData } from '../../models/route.model';
+import { RouteDataProviderService } from '../../services/route-data-provider.service';
 
 describe('RoutePickerComponent', () => {
   let component: RoutePickerComponent;

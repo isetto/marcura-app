@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { RouteDataProviderService } from '../services/route-data-provider.service';
+import { RouteDataProviderService } from '../../services/route-data-provider.service';
 import { Observable } from 'rxjs';
-import { RouteData } from '../models/route.model';
+import { RouteData } from '../../models/route.model';
 
 @Component({
   selector: 'app-route-picker',

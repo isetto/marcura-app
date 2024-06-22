@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import * as L from 'leaflet';
-import { RouteData } from '../models/route.model';
-import { RouteDataProviderService } from '../services/route-data-provider.service';
+import { RouteData } from '../../models/route.model';
+import { RouteDataProviderService } from '../../services/route-data-provider.service';
 import { Subscription } from 'rxjs';
 
 @Component({

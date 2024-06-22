@@ -1,6 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
-import { RouteData, RoutePoint } from '../models/route.model';
-import { RouteDataProviderService } from '../services/route-data-provider.service';
+import { RouteData, RoutePoint } from '../../models/route.model';
+import { RouteDataProviderService } from '../../services/route-data-provider.service';
 import { Subscription } from 'rxjs';
 import { EChartsOption } from 'echarts';
 

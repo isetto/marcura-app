@@ -2,9 +2,9 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ChartComponent } from './chart.component';
 import { EChartsOption } from 'echarts';
-import { RouteDataProviderService } from '../services/route-data-provider.service';
+import { RouteDataProviderService } from '../../services/route-data-provider.service';
 import { Subject } from 'rxjs';
-import { RouteData } from '../models/route.model';
+import { RouteData } from '../../models/route.model';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
