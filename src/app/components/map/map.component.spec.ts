@@ -8,6 +8,7 @@ import { RouteDataProviderService } from '../../services/route-data-provider.ser
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppModule } from 'src/app/app.module';
 
 describe('MapComponent', () => {
   let component: MapComponent;
@@ -33,12 +34,7 @@ describe('MapComponent', () => {
     mockRouteDataProviderService.selectedRoute$ = selectedRouteSubject.asObservable();
 
     await TestBed.configureTestingModule({
-      imports: [
-        MatCardModule,
-        MatFormFieldModule,
-        MatSelectModule,
-        BrowserAnimationsModule
-      ],
+      imports: [AppModule],
       declarations: [MapComponent],
       providers: [
         { provide: RouteDataProviderService, useValue: mockRouteDataProviderService }

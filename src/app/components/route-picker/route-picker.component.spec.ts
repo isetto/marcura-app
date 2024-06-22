@@ -10,6 +10,7 @@ import { By } from '@angular/platform-browser';
 import { of } from 'rxjs';
 import { RouteData } from '../../models/route.model';
 import { RouteDataProviderService } from '../../services/route-data-provider.service';
+import { AppModule } from 'src/app/app.module';
 
 describe('RoutePickerComponent', () => {
   let component: RoutePickerComponent;
@@ -44,13 +45,8 @@ describe('RoutePickerComponent', () => {
     mockRouteDataProviderService.routeData$ = of(mockRouteData);
 
     await TestBed.configureTestingModule({
-      imports: [
-        MatCardModule,
-        MatFormFieldModule,
-        MatSelectModule,
-        BrowserAnimationsModule
-      ],
-      declarations: [RoutePickerComponent, LegendComponent],
+      imports: [AppModule],
+      declarations: [RoutePickerComponent],
       providers: [
         { provide: RouteDataProviderService, useValue: mockRouteDataProviderService }
       ]

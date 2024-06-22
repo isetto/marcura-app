@@ -9,6 +9,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { AppModule } from 'src/app/app.module';
 
 describe('ChartComponent', () => {
   let component: ChartComponent;
@@ -35,14 +36,7 @@ describe('ChartComponent', () => {
 
     await TestBed.configureTestingModule({
       declarations: [ChartComponent],
-      imports: [
-        MatCardModule,
-        MatFormFieldModule,
-        MatSelectModule,
-        NgxEchartsModule.forRoot({
-          echarts: () => import('echarts')
-        }),
-      ],
+      imports: [AppModule],
       providers: [
         { provide: RouteDataProviderService, useValue: mockRouteDataProviderService }
       ]
