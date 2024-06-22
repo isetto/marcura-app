@@ -1,13 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MapComponent } from './map.component';
-import { MatCardModule } from '@angular/material/card';
 import { Subject } from 'rxjs';
 import { RouteData } from '../../models/route.model';
 import { RouteDataProviderService } from '../../services/route-data-provider.service';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSelectModule } from '@angular/material/select';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppModule } from 'src/app/app.module';
 
 describe('MapComponent', () => {

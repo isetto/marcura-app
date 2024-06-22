@@ -5,10 +5,6 @@ import { EChartsOption } from 'echarts';
 import { RouteDataProviderService } from '../../services/route-data-provider.service';
 import { Subject } from 'rxjs';
 import { RouteData } from '../../models/route.model';
-import { MatCardModule } from '@angular/material/card';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSelectModule } from '@angular/material/select';
-import { NgxEchartsModule } from 'ngx-echarts';
 import { AppModule } from 'src/app/app.module';
 
 describe('ChartComponent', () => {
