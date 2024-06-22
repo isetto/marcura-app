@@ -1,0 +1,17 @@
+<mat-card>
+  <div class="container">
+    <div>
+      <mat-form-field class="route-picker">
+        <mat-label>Select route</mat-label>
+        <mat-select (selectionChange)="onRouteChange($event.value)">
+          <mat-option *ngFor="let route of routes$ | async" [value]="route.route_id">
+            {{ route.from_port }} - {{ route.to_port }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  
+    <app-legend></app-legend>
+  </div>
+  
+</mat-card>
